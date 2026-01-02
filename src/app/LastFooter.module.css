@@ -1,0 +1,451 @@
+.footer {
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+    color: #ffffff;
+    padding: 40px 0 40px;
+  font-family: 'Roobert', sans-serif;
+}
+
+.socialSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.followText {
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.arrow {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.socialIcons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.socialIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+    color: #ff6b35;
+    transform: translateY(-2px);
+}
+
+.socialIcon svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #333333;
+    margin: 0 auto 40px;
+}
+
+.mainContent {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.mainHeading {
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 1.1;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.footerLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.footerLink {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.footerLink:hover {
+    color: #ff6b35;
+}
+
+.scrollToTop {
+    background-color: #ff6b35;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: auto;
+}
+
+.scrollToTop:hover {
+    background-color: #e55a2b;
+    transform: translateY(-2px);
+}
+
+.scrollToTop svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* Enhanced Responsive Design */
+
+/* Large tablets and small desktops */
+@media (max-width: 1200px) {
+    .footer {
+        padding: 38px 0 38px;
+    }
+
+    .mainHeading {
+        font-size: 4rem;
+    }
+
+    .socialSection {
+        margin-bottom: 55px;
+        gap: 28px;
+    }
+
+    .socialIcons {
+        gap: 28px;
+    }
+
+    .divider {
+        margin-bottom: 38px;
+    }
+
+    .mainContent {
+        margin-bottom: 55px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    .footer {
+        padding: 36px 0 36px;
+    }
+
+    .mainHeading {
+        font-size: 3.5rem;
+    }
+
+    .socialSection {
+        margin-bottom: 50px;
+        gap: 25px;
+    }
+
+    .socialIcons {
+        gap: 20px;
+    }
+
+    .followText {
+        font-size: 15px;
+    }
+
+    .arrow {
+        font-size: 17px;
+    }
+
+    .mainContent {
+        margin-bottom: 50px;
+    }
+
+    .divider {
+        margin-bottom: 36px;
+    }
+}
+
+/* Mobile landscape and small tablets */
+@media (max-width: 768px) {
+    .footer {
+        padding: 35px 0 30px;
+    }
+
+    .mainHeading {
+        font-size: 3rem;
+    }
+
+    .socialSection {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        margin-bottom: 45px;
+    }
+
+    .socialIcons {
+        gap: 18px;
+    }
+
+    .followText {
+        font-size: 15px;
+    }
+
+    .divider {
+        margin-bottom: 32px;
+    }
+
+    .mainContent {
+        margin-bottom: 45px;
+    }
+
+    .footerLinks {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+    }
+
+    .footerLink {
+        font-size: 13px;
+    }
+
+    .scrollToTop {
+        margin-left: 0;
+        margin-top: 18px;
+        width: 46px;
+        height: 46px;
+    }
+
+    .scrollToTop svg {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+/* Mobile portrait */
+@media (max-width: 576px) {
+    .footer {
+        padding: 30px 0 25px;
+    }
+
+    .mainHeading {
+        font-size: 2.2rem;
+        padding: 0 20px;
+    }
+
+    .socialSection {
+        margin-bottom: 40px;
+        gap: 18px;
+    }
+
+    .socialIcons {
+        gap: 14px;
+    }
+
+    .socialIcon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .socialIcon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .followText {
+        font-size: 14px;
+    }
+
+    .arrow {
+        font-size: 16px;
+    }
+
+    .divider {
+        margin-bottom: 30px;
+    }
+
+    .mainContent {
+        margin-bottom: 40px;
+    }
+
+    .footerLinks {
+        gap: 16px;
+    }
+
+    .footerLink {
+        font-size: 13px;
+    }
+
+    .scrollToTop {
+        width: 44px;
+        height: 44px;
+        margin-top: 16px;
+    }
+
+    .scrollToTop svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .footer {
+        padding: 28px 0 22px;
+    }
+
+    .mainHeading {
+        font-size: 1.8rem;
+        padding: 0 15px;
+    }
+
+    .socialSection {
+        margin-bottom: 35px;
+        gap: 16px;
+    }
+
+    .socialIcons {
+        gap: 12px;
+    }
+
+    .socialIcon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .socialIcon svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .followText {
+        font-size: 13px;
+    }
+
+    .arrow {
+        font-size: 15px;
+    }
+
+    .divider {
+        margin-bottom: 28px;
+    }
+
+    .mainContent {
+        margin-bottom: 35px;
+    }
+
+    .footerLinks {
+        gap: 14px;
+    }
+
+    .footerLink {
+        font-size: 12px;
+    }
+
+    .scrollToTop {
+        width: 42px;
+        height: 42px;
+        margin-top: 14px;
+    }
+
+    .scrollToTop svg {
+        width: 13px;
+        height: 13px;
+    }
+}
+
+/* Extra extra small devices */
+@media (max-width: 360px) {
+    .footer {
+        padding: 25px 0 20px;
+    }
+
+    .mainHeading {
+        font-size: 1.6rem;
+        padding: 0 12px;
+    }
+
+    .socialSection {
+        margin-bottom: 30px;
+        gap: 14px;
+    }
+
+    .socialIcons {
+        gap: 10px;
+    }
+
+    .socialIcon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .socialIcon svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .followText {
+        font-size: 12px;
+    }
+
+    .arrow {
+        font-size: 14px;
+    }
+
+    .divider {
+        margin-bottom: 25px;
+    }
+
+    .mainContent {
+        margin-bottom: 30px;
+    }
+
+    .footerLinks {
+        gap: 12px;
+    }
+
+    .footerLink {
+        font-size: 11px;
+    }
+
+    .scrollToTop {
+        width: 40px;
+        height: 40px;
+        margin-top: 12px;
+    }
+
+    .scrollToTop svg {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+/* Additional styles for better spacing */
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}

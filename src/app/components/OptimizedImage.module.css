@@ -1,0 +1,25 @@
+.loading {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+}
+
+.errorPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f4f6;
+  color: #6b7280;
+  border: 1px dashed #d1d5db;
+  border-radius: 8px;
+  padding: 20px;
+  min-height: 200px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.errorPlaceholder .material-symbols-sharp {
+  font-size: 48px;
+  margin-bottom: 8px;
+  opacity: 0.5;
+}

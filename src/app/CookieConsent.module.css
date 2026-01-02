@@ -1,0 +1,205 @@
+.banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid #1f2937;
+  background-color: #ffffff; /* clean white */
+  font-family: 'Roobert', sans-serif; /* same font */
+  font-size: 14px;
+  color: #1f2937; /* your main dark text color */
+  box-shadow: 0 -2px 8px rgb(0 0 0 / 0.1);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1050;
+  gap: 1rem;
+}
+
+.bannerText {
+  flex: 1 1 60%;
+  line-height: 1.4;
+  color: #374151; /* medium gray text */
+}
+
+.bannerText a {
+  color: #8B5CF6; /* your purple accent */
+  text-decoration: underline;
+}
+
+.bannerText a:hover {
+  color: #6d3bbd;
+  text-decoration: none;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: nowrap;
+}
+
+.btnPreference {
+  background: none;
+  border: none;
+  color: #8B5CF6;
+  padding: 8px 16px;
+  text-decoration: underline;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.btnPreference:hover {
+  background-color: none;
+}
+
+.btnReject {
+  background-color: #1f2937; /* your dark color */
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.btnReject:hover {
+  background-color: #3c4a5b;
+}
+
+.btnAccept {
+  background-color: #8B5CF6; /* purple */
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.btnAccept:hover {
+  background-color: #6d3bbd;
+}
+
+/* Enhanced Responsive Design */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .banner {
+    padding: 0.9rem 1.5rem;
+    font-size: 13px;
+  }
+  
+  .btnPreference,
+  .btnReject,
+  .btnAccept {
+    padding: 7px 18px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile landscape and small tablets */
+@media (max-width: 768px) {
+  .banner {
+    padding: 0.8rem 1.2rem;
+    font-size: 13px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .bannerText {
+    flex: 1 1 100%;
+    margin-bottom: 0.8rem;
+    font-size: 13px;
+  }
+  
+  .buttons {
+    flex: 1 1 100%;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  .btnPreference,
+  .btnReject,
+  .btnAccept {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 576px) {
+  .banner {
+    padding: 0.7rem 1rem;
+    font-size: 12px;
+  }
+  
+  .bannerText {
+    font-size: 12px;
+    margin-bottom: 0.7rem;
+  }
+  
+  .buttons {
+    gap: 0.5rem;
+  }
+  
+  .btnPreference,
+  .btnReject,
+  .btnAccept {
+    padding: 7px 14px;
+    font-size: 11px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .banner {
+    padding: 0.6rem 0.8rem;
+    font-size: 11px;
+  }
+  
+  .bannerText {
+    font-size: 11px;
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+  }
+  
+  .buttons {
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+  
+  .btnPreference,
+  .btnReject,
+  .btnAccept {
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+}
+
+/* Extra extra small devices */
+@media (max-width: 360px) {
+  .banner {
+    padding: 0.5rem 0.6rem;
+    font-size: 10px;
+  }
+  
+  .bannerText {
+    font-size: 10px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .btnPreference,
+  .btnReject,
+  .btnAccept {
+    padding: 5px 10px;
+    font-size: 9px;
+  }
+}

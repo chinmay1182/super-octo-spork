@@ -1,0 +1,437 @@
+.focusAreasSection {
+  font-family: 'Roobert', sans-serif;
+  padding: 60px 0;
+  background: white;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Header Styles */
+.headerSection {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.mainTitle {
+  font-size: clamp(20px, 4vw, 36px);
+  font-weight: 400;
+  color: #1f2937;
+  margin-bottom: 30px;
+  font-family: 'Roobert', sans-serif;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: clamp(14px, 2.5vw, 18px);
+  color: #6b7280;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Focus Items Container */
+.focusItemsContainer {
+  margin-bottom: 40px;
+}
+
+.focusItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* .focusItem:hover {
+  background: #f9fafb;
+  margin: 0 -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 8px;
+} */
+
+.focusItem:hover .arrowIcon {
+  color: #8B5CF6;
+  transform: translateX(4px);
+}
+
+.itemContent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon {
+  height: 50px;
+}
+
+.iconContainer {
+  flex-shrink: 0;
+}
+
+.iconCircle {
+  width: 80px;
+  height: 80px;
+  background: #fafafa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  transition: all 0.3s ease;
+}
+
+
+.icon {
+  font-size: 24px;
+  color: #4b5563;
+  animation: spinInPlace 3s linear infinite;
+
+}
+
+@keyframes spinInPlace {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.itemTitle {
+  font-size: clamp(16px, 3vw, 24px);
+  font-weight: 400;
+  color: #1f2937;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.arrowIconLarge {
+  font-size: 48px;
+}
+
+/* Button Styles */
+.buttonContainer {
+  text-align: center;
+}
+
+.viewAllBtn {
+  background: #000000;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.viewAllBtn:hover {
+  background: #333333;
+  transform: translateY(-2px);
+}
+
+.btnArrow {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.viewAllBtn:hover .btnArrow {
+  transform: translateX(4px);
+}
+
+/* Enhanced Responsive Design */
+
+/* Large tablets and small desktops */
+@media (max-width: 1200px) {
+  .focusAreasSection {
+    padding: 50px 0;
+  }
+  
+  .mainTitle {
+    font-size: 32px;
+  }
+  
+  .subtitle {
+    font-size: 17px;
+  }
+  
+  .itemTitle {
+    font-size: 22px;
+  }
+  
+  .iconCircle {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .icon {
+    height: 45px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .focusAreasSection {
+    padding: 45px 0;
+  }
+  
+  .headerSection {
+    margin-bottom: 50px;
+  }
+  
+  .mainTitle {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+    max-width: 700px;
+  }
+  
+  .itemTitle {
+    font-size: 20px;
+  }
+  
+  .iconCircle {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .icon {
+    height: 40px;
+  }
+  
+  .focusItem {
+    padding: 12px 0;
+  }
+  
+  .itemContent {
+    gap: 18px;
+  }
+}
+
+/* Mobile landscape and small tablets */
+@media (max-width: 768px) {
+  .focusAreasSection {
+    padding: 40px 0;
+  }
+  
+  .headerSection {
+    margin-bottom: 40px;
+  }
+
+  .mainTitle {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+    padding: 0 20px;
+    max-width: 600px;
+  }
+
+  .itemTitle {
+    font-size: 18px;
+  }
+
+  .iconCircle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon {
+    height: 35px;
+  }
+
+  .focusItem {
+    padding: 16px 0;
+  }
+
+  .itemContent {
+    gap: 15px;
+  }
+  
+  .viewAllBtn {
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 576px) {
+  .focusAreasSection {
+    padding: 35px 0;
+  }
+  
+  .headerSection {
+    margin-bottom: 35px;
+  }
+
+  .mainTitle {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    padding: 0 15px;
+    max-width: 500px;
+  }
+
+  .itemTitle {
+    font-size: 16px;
+  }
+
+  .iconCircle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon {
+    height: 30px;
+  }
+
+  .focusItem {
+    padding: 14px 0;
+  }
+
+  .itemContent {
+    gap: 12px;
+  }
+  
+  .viewAllBtn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+  
+  .arrowContainer .material-symbols-sharp {
+    font-size: 28px !important;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .focusAreasSection {
+    padding: 30px 0;
+  }
+  
+  .headerSection {
+    margin-bottom: 30px;
+  }
+
+  .mainTitle {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    padding: 0 10px;
+    max-width: 400px;
+  }
+
+  .itemTitle {
+    font-size: 15px;
+  }
+
+  .iconCircle {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon {
+    height: 25px;
+  }
+
+  .focusItem {
+    padding: 12px 0;
+  }
+
+  .itemContent {
+    gap: 10px;
+  }
+  
+  .viewAllBtn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+  
+  .arrowContainer .material-symbols-sharp {
+    font-size: 24px !important;
+  }
+  
+  .focusItem:hover {
+    margin: 0 -10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Extra extra small devices */
+@media (max-width: 360px) {
+
+
+  .focusAreasSection {
+    padding: 16px;
+  }
+  
+  .headerSection {
+    margin-bottom: 25px;
+  }
+
+  .mainTitle {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+    padding: 0 8px;
+    max-width: 350px;
+  }
+
+  .itemTitle {
+    font-size: 15px;
+  }
+
+  .iconCircle {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon {
+    height: 30px;
+  }
+
+  .focusItem {
+    padding: 10px 0;
+  }
+
+  .itemContent {
+    gap: 8px;
+  }
+  
+  .viewAllBtn {
+    padding: 8px 16px;
+    font-size: 15px;
+  }
+  
+  .arrowContainer .material-symbols-sharp {
+    font-size: 20px !important;
+  }
+}

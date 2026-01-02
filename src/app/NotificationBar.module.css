@@ -1,0 +1,105 @@
+/* NotificationBar.module.css */
+.notificationBar {
+    background-color: rgb(255, 107, 53);
+  font-family: 'Roobert', sans-serif;
+    color: black;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.scrollText {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 120s linear infinite;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Enhanced Responsive Design */
+
+/* Large tablets and small desktops */
+@media (max-width: 1200px) {
+    .notificationBar {
+        height: 48px;
+    }
+    
+    .scrollText {
+        font-size: 14px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    .notificationBar {
+        height: 46px;
+    }
+    
+    .scrollText {
+        font-size: 14px;
+        animation: scroll-left 100s linear infinite;
+    }
+}
+
+/* Mobile landscape and small tablets */
+@media (max-width: 768px) {
+    .notificationBar {
+        height: 44px;
+    }
+    
+    .scrollText {
+        font-size: 13px;
+        animation: scroll-left 80s linear infinite;
+    }
+}
+
+/* Mobile portrait */
+@media (max-width: 576px) {
+    .notificationBar {
+        height: 42px;
+    }
+    
+    .scrollText {
+        font-size: 12px;
+        animation: scroll-left 60s linear infinite;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .notificationBar {
+        height: 40px;
+    }
+    
+    .scrollText {
+        font-size: 11px;
+        animation: scroll-left 50s linear infinite;
+    }
+}
+
+/* Extra extra small devices */
+@media (max-width: 360px) {
+    .notificationBar {
+        height: 38px;
+    }
+    
+    .scrollText {
+        font-size: 10px;
+        animation: scroll-left 40s linear infinite;
+    }
+}
