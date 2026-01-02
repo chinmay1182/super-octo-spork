@@ -1,0 +1,46 @@
+name: Deploy to VPS
+
+on:
+    push:
+        branches:
+            - main
+            - master
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Copy files to VPS
+              uses: appleboy/scp-action@v0.1.7
+              with:
+                  host: ${{ secrets.VPS_HOST }}
+                  username: ${{ secrets.VPS_USERNAME }}
+                  password: ${{ secrets.VPS_PASSWORD }}
+                  # key: ${{ secrets.SSH_PRIVATE_KEY }} # Optional if using key
+                  source: "."
+                  target: "/home/omodigital/htdocs/"
+                  # Exclude heavy folders that are generated or git related
+                  rm: false # Do not delete existing files before copy (safer, but accumulates garbage if not careful. set true if you want clean slate)
+                  strip_components: 0
+
+            - name: SSH and Deploy
+              uses: appleboy/ssh-action@v1.0.3
+              with:
+                  host: ${{ secrets.VPS_HOST }}
+                  username: ${{ secrets.VPS_USERNAME }}
+                  password: ${{ secrets.VPS_PASSWORD }}
+                  # key: ${{ secrets.SSH_PRIVATE_KEY }}
+                  script: |
+                      cd /home/omodigital/htdocs/
+                      # Fix permissions since we logged in as root
+                      chown -R omodigital:omodigital . || true
+
+                      # Build and start the container
+                      docker compose down || true # stop existing if any (optional, mostly for clean rebuild)
+                      docker compose up -d --build
+
+                      # Clean up unused images to save space
+                      docker image prune -f

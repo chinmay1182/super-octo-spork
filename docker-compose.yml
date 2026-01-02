@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: omodigital-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "3005:3000"
+    environment:
+      - NODE_ENV=production
+    # Add other environment variables here if needed
+    # env_file:
+    #   - .env.production
